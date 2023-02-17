@@ -1,0 +1,270 @@
+/* Geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.859);
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    overflow: auto;
+    font-style: italic;
+    
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+
+}
+
+
+
+body {
+
+    background-image: url("./fundo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./chuva.png);
+    width: 100%;
+    height: 100%;
+    animation: anime 500ms linear infinite;
+    pointer-events: none;
+    opacity: 0.3;
+
+
+
+}
+
+@keyframes anime {
+    0% {
+        background-position: 0 0;
+
+    }
+
+    100% {
+        background-position: 20% 100%;
+    }
+
+
+
+}
+
+
+
+
+button {
+    background-color: #ffffff;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #102f5e;
+    
+}
+
+button:hover>i {
+    color: rgb(255, 255, 255);
+}
+
+button i {
+    pointer-events: none;
+    color: #102f5e;
+    font-weight: bold;
+}
+
+
+
+
+input,
+select {
+    padding: 0.25rem 0.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.hide {
+    display: none;
+}
+
+
+#todo-input {
+    width: 70%;
+}
+
+
+/* Todo Header */
+#title {
+    text-align: center;
+   
+}
+
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/* Todo Form */
+#todo-form,
+#edit-form {
+    padding: 1rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    
+}
+
+#todo-form button,
+#edit-form button[type="submit"] {
+    display: inline-block;
+    padding: 0.21rem 0.7rem  0.28rem;
+    
+}
+#todo-form i,
+#edit-form i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+   
+}
+
+
+
+#edit-form input{
+    width: 70%;
+    margin: auto;
+}
+
+
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    color:  #102f5e;
+    margin: 1rem auto;
+ font-weight: bold;
+}
+
+#cancel-edit-btn:hover{
+    color: #ffffff;
+}
+
+/* Todo Toolbar */
+#toolbar {
+    padding: 1rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    display: flex;
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+}
+
+#search {
+    border-right: 2px solid rgb(255, 255, 255);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    flex: 1;
+}
+
+
+
+/* Todo List */
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.3s;
+
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+    overflow: auto;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+}
+
+.done {
+    background: #2c3e4fb7;
+}
+
+button i {
+    pointer-events: none;
+}
+
+.done h3 {
+    color: rgb(255, 255, 255);
+    text-decoration: line-through;
+
+}
